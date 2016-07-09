@@ -1,15 +1,10 @@
-#include <ananas/types.h>
+#include <loader/types.h>
 #include <loader/diskio.h>
 #include <loader/lib.h>
 #include <loader/platform.h>
 #include <loader/vfs.h>
 #include <loader/elf.h>
-
-#if defined(__i386__)
-#define PLATFORM "x86"
-#elif defined(_ARCH_PPC)
-#define PLATFORM "powerpc"
-#endif
+#include <machine/param.h> /* for PLATFORM */
 
 void autoboot();
 void interact();

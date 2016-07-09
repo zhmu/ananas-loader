@@ -2,10 +2,13 @@
 #include <loader/module.h>
 #include <loader/x86.h>
 #include <loader/platform.h>
-#include <ananas/i386/param.h>  /* for page-size */
-#include <ananas/amd64/vm.h>    /* for PE_xxx */
+#include <machine/param.h>  /* for page-size */
 
 #ifdef X86_64
+
+#define PE_P	(1ULL <<  0)
+#define PE_RW	(1ULL <<  1)
+#define PE_PS	(1ULL <<  7)
 
 /* PML4 pointer */
 uint64_t* pml4;

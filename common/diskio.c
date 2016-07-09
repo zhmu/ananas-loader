@@ -12,7 +12,7 @@
  * new block to use and to evict used blocks.
  *
  */
-#include <ananas/types.h>
+#include <loader/types.h>
 #include <loader/diskio.h>
 #include <loader/lib.h>
 #include <loader/platform.h>

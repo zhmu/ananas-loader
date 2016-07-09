@@ -3,9 +3,9 @@
  * calling the BIOS interrupts for the intended functionality and converting
  * values from and to more general values (i.e. LBA instead of CHS)
  */
-#include <ananas/types.h> 
-#include <ananas/x86/smap.h>
-#include <ananas/i386/param.h>	/* for page-size */
+#include <loader/types.h>
+#include <loader/smap.h>
+#include <machine/param.h>	/* for page-size */
 #include <ananas/bootinfo.h>
 #include <loader/diskio.h>
 #include <loader/lib.h>

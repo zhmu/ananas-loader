@@ -1,11 +1,9 @@
 /*
  * This is our FAT driver; it supports FAT12/16/32 including long file names.
  */
-#include <sys/types.h>
+#include <loader/types.h>
 #include <loader/diskio.h>
 #include <loader/vfs.h>
-#include <stdio.h>
-#include <string.h>
 #include <fat.h>
 
 #ifdef FAT

@@ -3,11 +3,9 @@
  * single sectors, it greatly abuses the fact that a block size is always a
  * multiple of 1024.
  */
-#include <sys/types.h>
+#include <loader/types.h>
 #include <loader/diskio.h>
 #include <loader/vfs.h>
-#include <stdio.h>
-#include <string.h>
 #include <ext2.h>
 
 #ifdef EXT2

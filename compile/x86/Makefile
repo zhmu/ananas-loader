@@ -1,7 +1,8 @@
 TARGET:		machine loader
 S=		../..
 
-CFLAGS=		-DEXT2 -DPXE -DTFTP -DRAMDISK -DX86_64 -DELF32 -DELF64 -DFAT -DVBE
+CFLAGS=		-m32
+CFLAGS+=	-DEXT2 -DPXE -DTFTP -DRAMDISK -DX86_64 -DELF32 -DELF64 -DFAT -DVBE
 #CFLAGS+=	-DDEBUG_SERIAL=0x3f8
 CFLAGS+=	-DDEBUG_CALLS
 include		$S/compile/Makefile.common
@@ -29,7 +30,7 @@ loader:		$(OBJS) $S/conf/ld.x86
 		$(LD) -b elf32-i386 -T $S/conf/ld.x86 -o loader $(OBJS)
 
 machine:
-		ln -sf ../../../include/ananas/i386 machine
+		ln -sf ../../include/x86 machine
 
 clean:
 		rm -f loader machine $(OBJS)

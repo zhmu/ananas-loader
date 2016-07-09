@@ -3,12 +3,10 @@
  * single sectors, it relies on the fact that a CD sector consists of a
  * multiple of 512-byte sectors.
  */
-#include <ananas/types.h>
+#include <loader/types.h>
 #include <loader/diskio.h>
 #include <loader/vfs.h>
 #include <loader/platform.h>
-#include <stdio.h>
-#include <string.h>
 #include <iso9660.h>
 
 #ifdef ISO9660
